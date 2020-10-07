@@ -46,6 +46,8 @@
   
 
   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/meteorlxy/vssue@1.4.4/packages/vssue/dist/vssue.min.css">
+  
 
   <!-- import link -->
   
@@ -662,7 +664,27 @@
 
 
 
-  <script type="text/javascript" src="https://example.com/(path/)comments.php"></script> 
+  <script src="https://cdn.jsdelivr.net/gh/vuejs/vue@2.6.11/dist/vue.runtime.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/meteorlxy/vssue@1.4.4/packages/vssue/dist/vssue.github.min.js"></script>
+<script>
+  new Vue({
+    el: '#vssue',
+
+    render: h => h('Vssue', {
+      props: {
+        title: "所有分类 - Noau",
+        options: {
+          owner: 'noau',
+          repo: 'noau.github.io',
+          clientId: 'abe454a6ecf99adfb429',
+          clientSecret: '4a35ed216c0472ed05dcfe8acd07380811a08790',
+          prefix: '',
+          autoCreateIssue: true,
+        },
+      }
+    })
+  })
+</script>
 
 
 
