@@ -17,7 +17,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>所有分类 - Noau</title>
+  <title>【记录】个人博客的搭建 - Noau</title>
+  
+    <meta name="keywords" content="Hexo">
   
 
   
@@ -330,7 +332,7 @@
   
     
     
-        <div class='cover-wrapper category search' style="display: none;">
+        <div class='cover-wrapper post search' style="display: none;">
           
             <div class='cover-backstretch'></div>
           
@@ -374,8 +376,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">【记录】个人博客的搭建</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -404,42 +406,240 @@
         
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
-    
-      <div class='post-wrapper'>
-        <article id="cat" class="post article white-box reveal shadow">
-          <h2>所有分类</h2>
-          <div class="all-cats">
-            
-              
-                <a class="" href="/categories/Others/">
-                  <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;Others</span>
-                  <span class="title">
-                    (1)
-                  </span>
-                </a>
-              
-                <a class="" href="/categories/Record/">
-                  <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;Record</span>
-                  <span class="title">
-                    (1)
-                  </span>
-                </a>
-              
-            
-          </div>
-          <br>
-          <ul>
-<li>Others</li>
-<li>Record</li>
-</ul>
 
-        </article>
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        【记录】个人博客的搭建
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="/img/cover.png">
+    <p>Noau</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Record/">Record</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年10月7日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="【记录】个人博客的搭建" data-path="/post/dfa7.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
       </div>
     
+  </div>
+
+
   
+  <h2 id="【记录】个人博客的搭建"><a href="#【记录】个人博客的搭建" class="headerlink" title="【记录】个人博客的搭建"></a>【记录】个人博客的搭建</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>  国庆放假在家，没什么干的，就想着搭一个博客来玩玩。本来打算用 <code>WordPress</code> 的，但是 <code>WP</code> 不太好用，就换了 <code>Hexo</code> 。</p>
+<p>  成品:    <a target="_blank" rel="noopener" href="https://noau.github.io/">戳这里</a></p>
+<h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>主要就两条命令：<br>    <code>npm install hexo-cli -g</code><br>    <code>hexo init &lt;folder&gt;</code><br>就可以搭建好一个简单的 <code>Hexo</code> 博客。</p>
+<h4 id="配置基本信息"><a href="#配置基本信息" class="headerlink" title="配置基本信息"></a>配置基本信息</h4><p>编辑博客目录下的 <code>_config.yml</code> 文件，没什么特殊的，主要是在 <code>deploy</code> 下配置 <code>github</code> 信息，到后面用 <code>github pages</code> 的时候就不用再配置了。</p>
+<blockquote>
+<p>ps. <code>Gitee</code> 等也是在这里配置</p>
+</blockquote>
+<h4 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h4><p>主题配置起来比较麻烦，花了我一天半的时间才折腾个大概。<br>配置了好多次主题，第一次用的是 <code>mellow</code> ，但是不是很喜欢，第二次的 <code>melody</code> 也是，<code>icarus</code> 不知道为什么运行不起来,最后用了现在这个配置相当简单的 <code>volantis</code> 。</p>
+<p><code>volantis</code> 配置起来很简单，跟着官方的教程来就很不错，全中文文档。主要是现在更新了 <code>4.0.0</code> ，和网上查到的老版本会有很多不一样。</p>
+<p>最麻烦的就是 <code>blog/_config.volantis.yml</code> 和 <code>blog/themes/volantis/_config.yml</code>，大部分教程（包括官方文档），都没怎么提到这两个的区别，折腾了一两个小时才搞明白。</p>
+<p>（其实现在好多主题都在用 <code>blog/_config.&lt;themename&gt;.yml</code> 来配置主题，但是网上查到的文章有很多都太老，压根不会提到，有些主题又默认删掉了 <code>blog/themes/&lt;themename&gt;/_config.yml</code> 的文件，就会很迷。）</p>
+<h5 id="樱花特效"><a href="#樱花特效" class="headerlink" title="樱花特效"></a>樱花特效</h5><p>这个樱花特效是别人做好的，直接在文件里应用就好，在 <code>themes/volantis/layout/layout.ejs</code> 里加一行就好( <code>&lt;script</code> 这行)。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/sakura.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	...</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>实际效果还是很好看的。顺便吐个槽，原本是想加一个雪花特效的，其中用到了</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="handlebars"><span class="xml">	document.write(&quot;<span class="tag">&lt;<span class="name">script</span>&gt;</span>...</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>&quot;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>没想到 <code>Hexo</code> 把这几个 <code>&lt;script&gt;</code> 标签弄混了，一直在报错。</p>
+<h5 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h5><p>这一部分我个人认为是最麻烦的，第一次搭建博客极其容易搞出一堆 <code>Error</code> 和 <code>Warn</code>. <code>volantis</code> 本身支持很多个评论系统，最开始打算用 <code>gitalk</code> ,但是各种报错，最后换成了 <code>vssue</code> 。<br>重点就在于多试几个，多重复几次，总有一次能成功的。</p>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+        
+  <div class="related_posts">
+    <section class='header'>
+      <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
+    </section>
+    <section class='body'>
+      <div class="vlts-rps"><a class="item" href="/post/3eeb.html" title="Hello World" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" /><span class="title">Hello World</span></a></div></section></div>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://example.com/post/dfa7.html>http://example.com/post/dfa7.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-07T15:28:23+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年10月7日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Hexo/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Hexo</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/post/dfa7.html&title=【记录】个人博客的搭建 - Noau&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/post/dfa7.html&title=【记录】个人博客的搭建 - Noau&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/post/dfa7.html&title=【记录】个人博客的搭建 - Noau&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/post/3eeb.html'>
+          <p class='title'>Hello World<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="vssue"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -449,11 +649,26 @@
 
 
 
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E8%AE%B0%E5%BD%95%E3%80%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="toc-text">【记录】个人博客的搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-text">配置基本信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="toc-text">配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A8%B1%E8%8A%B1%E7%89%B9%E6%95%88"><span class="toc-text">樱花特效</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="toc-text">评论系统</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
 
   
 
 
 </aside>
+
 
 
         
@@ -680,7 +895,7 @@
 
     render: h => h('Vssue', {
       props: {
-        title: "所有分类 - Noau",
+        title: "【记录】个人博客的搭建 - Noau",
         options: {
           owner: 'noau',
           repo: 'noau.github.io',
