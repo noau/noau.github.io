@@ -44,11 +44,13 @@
   
 
   
-    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+    <link rel="shortcut icon" type='image/x-icon' href="/img/MyLogo.png">
   
 
   
 
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/meteorlxy/vssue@1.4.4/packages/vssue/dist/vssue.min.css">
   
 
   <!-- import link -->
@@ -79,6 +81,9 @@
 </head>
 
 <body>
+
+  <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/sakura.js"></script>
+
   <header class="l_header auto shadow blur " style='opacity: 0' >
   <div class='container'>
   <div class='wrapper'>
@@ -95,6 +100,8 @@
       
         
         <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='/img/MyLogo.png'/>
           
           
           
@@ -329,7 +336,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper  search' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
           
@@ -337,57 +344,21 @@
   <div class='top'>
     
     
-      <p class="title">Volantis</p>
+      <p class="title">Welcome</p>
     
     
   </div>
   <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="Search in My Blog" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/v4/getting-started/"
-              
-              
-              id="v4getting-started">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>文档</p>
-            </a>
-          
-            <a href="/faqs/"
-              
-              
-              id="faqs">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>帮助</p>
-            </a>
-          
-            <a href="/examples/"
-              
-              
-              id="examples">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>示例</p>
-            </a>
-          
-            <a href="/contributors/"
-              
-              
-              id="contributors">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              id="archives">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
-              
-              
-              id="https:githubcomvolantis-xhexo-theme-volantis">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>源码</p>
-            </a>
-          
         
       </div>
     </div>
@@ -473,7 +444,7 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/10/07/test/">
+      <a href="/post/f82e.html">
         test
       </a>
     </h2>
@@ -489,12 +460,15 @@
     <div class='meta-v3' line_style='solid'>
       <div>
         
+          
+          <a class='avatar' href='/'><img src='/img/cover.png'></a>
+        
         <time>2020-10-07</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2020/10/07/test/'>
+          <a class='readmore' href='/post/f82e.html'>
             阅读全文
           </a>
         </div>
@@ -516,7 +490,7 @@
   
     
     <h2 class="article-title" >
-      <a href="/2020/10/06/hello-world/">
+      <a href="/post/3eeb.html">
         Hello World
       </a>
     </h2>
@@ -533,12 +507,15 @@ Qu...
     <div class='meta-v3' line_style='solid'>
       <div>
         
+          
+          <a class='avatar' href='/'><img src='/img/cover.png'></a>
+        
         <time>2020-10-06</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2020/10/06/hello-world/'>
+          <a class='readmore' href='/post/3eeb.html'>
             阅读全文
           </a>
         </div>
@@ -570,7 +547,7 @@ Qu...
     
       
         <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          <img no-lazy src='/img/cover.png'/>
         </a>
       
     
@@ -786,34 +763,26 @@ Qu...
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-  function pjax_gitalk() {
-    if(!document.querySelectorAll("#gitalk-container")[0])return;
+  <script src="https://cdn.jsdelivr.net/gh/vuejs/vue@2.6.11/dist/vue.runtime.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/meteorlxy/vssue@1.4.4/packages/vssue/dist/vssue.github.min.js"></script>
+<script>
+  new Vue({
+    el: '#vssue',
 
-    let path = $.trim($('#pjax-comment-path').text());
-    if (path.length == 0) {
-      let defaultPath = '';
-      path = defaultPath || decodeURI(window.location.pathname);
-    }
-
-    if (document.getElementById('gitalk-container') != null) {
-      var gitalk = new Gitalk({
-        clientID: "72ff5dfb002dff66bede",
-        clientSecret: "46383aae0aa2419926146c0882d34b219bb7bad1",
-        repo: "https://github.com/noau/noau.github.io.git",
-        owner: "noau",
-        admin: "",
-        id: path,
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      });
-      gitalk.render('gitalk-container');
-    }
-  }
-
-  $(function () {
-    pjax_gitalk();
-  });
+    render: h => h('Vssue', {
+      props: {
+        title: "undefined - Noau",
+        options: {
+          owner: 'noau',
+          repo: 'https://github.com/noau/noau.github.io.git',
+          clientId: '72ff5dfb002dff66bede',
+          clientSecret: '46383aae0aa2419926146c0882d34b219bb7bad1',
+          prefix: '',
+          autoCreateIssue: true,
+        },
+      }
+    })
+  })
 </script>
 
 
@@ -1175,8 +1144,6 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         
         
         
-        
-          pjax_gitalk();
         
         
         
